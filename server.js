@@ -16,7 +16,17 @@ dotenv.config();
 connectDB();
 
 // middlewares
-app.use(cors());
+const allowedOrigins = [
+  'https://todosruthi-frontend1.vercel.app',
+  'http://localhost:3000' // for local dev
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
+}));
+
 app.use(express.json());
 
 // routes
