@@ -17,7 +17,7 @@ connectDB();
 
 // middlewares
 const allowedOrigins = [
-  'https://todosruthi-frontend1.vercel.app',
+  'https://todosruthi-frontend1-94a7.vercel.app',
   'http://localhost:3000' // for local dev
 ];
 
